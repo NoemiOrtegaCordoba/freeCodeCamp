@@ -1,0 +1,247 @@
+/* Estilos para elementos con la clase "sr-only" (accesibilidad) */
+span[class~="sr-only"] {
+    /* Ocultar visualmente el contenido */
+    border: 0 !important;
+    /* Sin borde */
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    /* Recortar a 1x1 píxel */
+    clip-path: inset(50%) !important;
+    /* Recortar el 50% */
+    height: 1px !important;
+    /* Altura de 1 píxel */
+    width: 1px !important;
+    /* Ancho de 1 píxel */
+    position: absolute !important;
+    /* Posición absoluta */
+    overflow: hidden !important;
+    /* Ocultar desbordamiento */
+    white-space: nowrap !important;
+    /* Sin saltos de línea */
+    padding: 0 !important;
+    /* Sin relleno */
+    margin: -1px !important;
+    /* Margen negativo para la ocultación precisa */
+}
+
+/* Estilos generales para todo el documento */
+html {
+    box-sizing: border-box;
+    /* Modelo de caja de borde */
+}
+
+body {
+    font-family: sans-serif;
+    /* Fuente sans-serif por defecto */
+    color: #0a0a23;
+    /* Color de texto */
+}
+
+/* Estilos para el encabezado h1 */
+h1 {
+    max-width: 37.25rem;
+    /* Ancho máximo del encabezado */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    padding: 1.5rem 1.25rem;
+    /* Relleno */
+}
+
+/* Estilos para el contenido flexible dentro de h1 */
+h1 .flex {
+    display: flex;
+    /* Mostrar como flexbox */
+    flex-direction: column-reverse;
+    /* Columna inversa para el segundo elemento */
+    gap: 1rem;
+    /* Espacio entre elementos */
+}
+
+/* Estilos para el primer elemento dentro de .flex */
+h1 .flex span:first-of-type {
+    font-size: 0.7em;
+    /* Tamaño de fuente más pequeño */
+}
+
+/* Estilos para el segundo elemento dentro de .flex */
+h1 .flex span:last-of-type {
+    font-size: 1.2em;
+    /* Tamaño de fuente más grande */
+}
+
+/* Estilos para la sección principal */
+section {
+    max-width: 40rem;
+    /* Ancho máximo de la sección */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    border: 2px solid #d0d0d5;
+    /* Borde con color */
+}
+
+/* Estilos para el elemento #years */
+#years {
+    display: flex;
+    /* Mostrar como flexbox */
+    justify-content: flex-end;
+    /* Justificar contenido al final */
+    position: sticky;
+    /* Posición pegajosa */
+    z-index: 999;
+    /* Índice de apilamiento alto */
+    top: 0;
+    /* Ajustar en la parte superior */
+    background: #0a0a23;
+    /* Color de fondo */
+    color: #fff;
+    /* Color de texto */
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    /* Relleno */
+    margin: 0 -2px;
+    /* Margen negativo para alinear con el borde de la sección */
+}
+
+/* Estilos para los elementos con clase en #years */
+#years span[class] {
+    font-weight: bold;
+    /* Fuente en negrita */
+    width: 4.5rem;
+    /* Ancho fijo */
+    text-align: right;
+    /* Alineación a la derecha */
+}
+
+/* Estilos para el contenedor .table-wrap */
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+    /* Relleno */
+}
+
+/* Estilos generales para tablas */
+table {
+    border-collapse: collapse;
+    /* Colapsar bordes de la tabla */
+    border: 0;
+    /* Sin borde */
+    width: 100%;
+    /* Ancho del 100% */
+    position: relative;
+    /* Posición relativa para contenido superpuesto */
+    margin-top: 3rem;
+    /* Margen superior */
+}
+
+/* Estilos para el título de la tabla (caption) */
+table caption {
+    color: #356eaf;
+    /* Color de texto */
+    font-size: 1.3em;
+    /* Tamaño de fuente */
+    font-weight: normal;
+    /* Peso de fuente normal */
+    position: absolute;
+    /* Posición absoluta */
+    top: -2.25rem;
+    /* Ajustar hacia arriba */
+    left: 0.5rem;
+    /* Ajustar hacia la izquierda */
+}
+
+/* Estilos para las celdas del cuerpo de la tabla */
+tbody td {
+    width: 100vw;
+    /* Ancho máximo de la celda */
+    min-width: 4rem;
+    /* Ancho mínimo de la celda */
+    max-width: 4rem;
+    /* Ancho máximo de la celda */
+}
+
+/* Estilos para las celdas del encabezado de la tabla */
+tbody th {
+    width: calc(100% - 12rem);
+    /* Ancho calculado para las celdas */
+}
+
+/* Estilos para las filas con clase "total" */
+tr[class="total"] {
+    border-bottom: 4px double #0a0a23;
+    /* Borde inferior doble */
+    font-weight: bold;
+    /* Fuente en negrita */
+}
+
+/* Estilos para las celdas de la fila "total" */
+tr[class="total"] th {
+    text-align: left;
+    /* Alineación a la izquierda */
+    padding: 0.5rem 0 0.25rem 0.5rem;
+    /* Relleno */
+}
+
+/* Estilos para las celdas de números en la fila "total" */
+tr.total td {
+    text-align: right;
+    /* Alineación a la derecha */
+    padding: 0 0.25rem;
+    /* Relleno */
+}
+
+/* Estilos para la tercera celda en la fila "total" */
+tr.total td:nth-of-type(3) {
+    padding-right: 0.5rem;
+    /* Relleno derecho */
+}
+
+/* Estilos al pasar el ratón sobre la fila "total" */
+tr.total:hover {
+    background-color: #99c9ff;
+    /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos para las celdas con clase "current" */
+td.current {
+    font-style: italic;
+    /* Fuente en cursiva */
+}
+
+/* Estilos para las filas de datos */
+tr.data {
+    background-image: linear-gradient(to bottom,
+            #dfdfe2 1.845rem,
+            white 1.845rem);
+    /* Imagen de fondo */
+}
+
+/* Estilos para las celdas de encabezado de fila de datos */
+tr.data th {
+    text-align: left;
+    /* Alineación a la izquierda */
+    padding-top: 0.3rem;
+    /* Relleno superior */
+    padding-left: 0.5rem;
+    /* Relleno izquierdo */
+}
+
+/* Estilos para las descripciones dentro de las filas de datos */
+tr.data th .description {
+    display: block;
+    /* Mostrar como bloque */
+    font-weight: normal;
+    /* Peso de fuente normal */
+    font-style: italic;
+    /* Fuente en cursiva */
+    padding: 1rem 0 0.75rem;
+    /* Relleno */
+    margin-right: -13.5rem;
+    /* Margen derecho negativo para ajuste */
+}
+
+/* Estilos para las celdas de datos */
+tr.data td {
+    vertical-align: top;
+    /* Alineación vertical superior */
+    padding: 0.3rem 0.25rem 0;
+    /* Relleno */
+    text-align: right;
+    /* Alineación a la derecha */
+}

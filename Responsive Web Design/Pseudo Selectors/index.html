@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5 -->
+<html lang="en"> <!-- Etiqueta raíz que especifica el idioma de la página -->
+
+<head>
+    <!-- Encabezado de la página donde se incluyen metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración de la vista adaptable para dispositivos móviles -->
+    <title>Balance Sheet</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Enlace a una hoja de estilo externa para aplicar estilos a la página -->
+</head>
+
+<body>
+    <!-- Cuerpo principal del documento HTML -->
+    <main>
+        <!-- Sección principal del contenido de la página -->
+        <section>
+            <!-- Sección que agrupa contenido relacionado -->
+            <h1>
+                <!-- Encabezado de nivel 1 que muestra el nombre de la empresa y el título "Balance Sheet" -->
+                <span class="flex">
+                    <!-- Elementos span para aplicar estilos flexibles -->
+                    <span>AcmeWidgetCorp</span>
+                    <span>Balance Sheet</span>
+                </span>
+            </h1>
+            <!-- Encabezado de nivel 2 que muestra años (invisibles para lectores de pantalla) -->
+            <div id="years" aria-hidden="true">
+                <!-- Elemento div para contener años -->
+                <span class="year">2019</span>
+                <!-- Elemento span que muestra el año 2019 -->
+                <span class="year">2020</span>
+                <!-- Elemento span que muestra el año 2020 -->
+                <span class="year">2021</span>
+                <!-- Elemento span que muestra el año 2021 -->
+            </div>
+            <!-- Div que contiene las tablas de datos -->
+            <div class="table-wrap">
+                <!-- Elemento div que envuelve las tablas -->
+                <table>
+                    <!-- Tabla que muestra información sobre activos -->
+                    <caption>Assets</caption>
+                    <!-- Título de la tabla que describe su contenido -->
+                    <thead>
+                        <!-- Sección de encabezado de la tabla -->
+                        <tr>
+                            <!-- Fila de encabezado de la tabla -->
+                            <td></td>
+                            <!-- Celda vacía para diseño -->
+                            <th><span class="sr-only year">2019</span></th>
+                            <!-- Celda de encabezado que contiene un año invisible para lectores de pantalla -->
+                            <th><span class="sr-only year">2020</span></th>
+                            <!-- Celda de encabezado que contiene un año invisible para lectores de pantalla -->
+                            <th class="current"><span class="sr-only year">2021</span></th>
+                            <!-- Celda de encabezado que contiene un año actual invisible para lectores de pantalla -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sección principal de datos de la tabla -->
+                        <tr class="data">
+                            <!-- Fila de datos de activos -->
+                            <th>Cash <span class="description">This is the cash we currently have on hand.</span></th>
+                            <!-- Celda que muestra el nombre del activo y una descripción -->
+                            <td>$25</td>
+                            <!-- Celda que muestra el valor del activo en 2019 -->
+                            <td>$30</td>
+                            <!-- Celda que muestra el valor del activo en 2020 -->
+                            <td class="current">$28</td>
+                            <!-- Celda que muestra el valor del activo en 2021 con una clase "current" -->
+                        </tr>
+                        <!-- ... Otras filas de datos de activos ... -->
+                        <tr class="total">
+                            <!-- Fila que muestra el total de activos -->
+                            <th>Total <span class="sr-only">Assets</span></th>
+                            <!-- Celda que muestra el título "Total Assets" y un año invisible -->
+                            <td>$579</td>
+                            <!-- Celda que muestra el total de activos en 2019 -->
+                            <td>$736</td>
+                            <!-- Celda que muestra el total de activos en 2020 -->
+                            <td class="current">$809</td>
+                            <!-- Celda que muestra el total de activos en 2021 con una clase "current" -->
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- ... Otras tablas de Pasivos y Patrimonio Neto ... -->
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
