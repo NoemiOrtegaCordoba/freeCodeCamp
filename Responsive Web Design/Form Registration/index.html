@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento: HTML5 -->
+<html lang="en"> <!-- Etiqueta raíz del documento con atributo de idioma (inglés) -->
+<head> <!-- Encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la escala inicial para dispositivos móviles -->
+    <title>Registration Form</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a una hoja de estilos externa (CSS) -->
+</head>
+<body> <!-- Cuerpo del documento -->
+    <h1>Registration Form</h1> <!-- Encabezado de nivel 1 (título principal) -->
+    <p>Please fill out this form with the required information</p> <!-- Párrafo de texto -->
+    <form method="post" action="https://register-demo.freecodecamp.org"> <!-- Formulario con método "POST" y atributo "action" que indica la URL de destino -->
+        <fieldset> <!-- Grupo de campos relacionados -->
+            <legend>Personal Information</legend> <!-- Leyenda del grupo de campos -->
+            <label for="first-name">First Name:</label> <!-- Etiqueta de campo con atributo "for" que se asocia al campo de entrada con el ID "first-name" -->
+            <input id="first-name" name="first-name" type="text" required> <!-- Campo de entrada de texto con ID, nombre y atributo "required" (obligatorio) -->
+            <label for="last-name">Last Name:</label> <!-- Etiqueta de campo -->
+            <input id="last-name" name="last-name" type="text" required> <!-- Campo de entrada de texto -->
+            <label for="email">Email:</label> <!-- Etiqueta de campo -->
+            <input id="email" name="email" type="email" required> <!-- Campo de entrada de correo electrónico -->
+            <label for="new-password">Create a New Password (at least 8 characters, lowercase and digits):</label> <!-- Etiqueta de campo -->
+            <input id="new-password" name="new-password" type="password" pattern="[a-z0-9]{8,}" required> <!-- Campo de entrada de contraseña con patrón y atributo "required" -->
+        </fieldset>
+        <fieldset> <!-- Otro grupo de campos relacionados -->
+            <legend>Account Type</legend> <!-- Leyenda del grupo de campos -->
+            <label for="personal-account"> <!-- Etiqueta de campo -->
+                <input id="personal-account" type="radio" name="account-type" class="inline"> Personal Account <!-- Campo de opción de radio con atributo "name" y clase -->
+            </label>
+            <label for="business-account"> <!-- Etiqueta de campo -->
+                <input id="business-account" type="radio" name="account-type" class="inline"> Business Account <!-- Campo de opción de radio con atributo "name" y clase -->
+            </label>
+            <label for="terms-and-conditions"> <!-- Etiqueta de campo -->
+                <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline"> <!-- Campo de verificación con atributo "required" y clase -->
+                I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a> <!-- Enlace dentro de la etiqueta de campo -->
+            </label>
+        </fieldset>
+        <fieldset> <!-- Otro grupo de campos relacionados -->
+            <legend>Additional Information</legend> <!-- Leyenda del grupo de campos -->
+            <label for="profile-picture">Upload a profile picture:</label> <!-- Etiqueta de campo -->
+            <input id="profile-picture" type="file" name="file"> <!-- Campo de carga de archivo -->
+            <label for="age">Input your age (years):</label> <!-- Etiqueta de campo -->
+            <input id="age" type="number" name="age" min="13" max="120"> <!-- Campo de entrada de número con valores mínimo y máximo -->
+            <label for="referrer">How did you hear about us?</label> <!-- Etiqueta de campo -->
+            <select id="referrer" name="referrer"> <!-- Campo de selección -->
+                <option value="">(select one)</option> <!-- Opción por defecto -->
+                <option value="1">freeCodeCamp News</option> <!-- Opción de selección -->
+                <option value="2">freeCodeCamp YouTube Channel</option> <!-- Opción de selección -->
+                <option value="3">freeCodeCamp Forum</option> <!-- Opción de selección -->
+                <option value="4">Other</option> <!-- Opción de selección -->
+            </select>
+            <label for="bio">Provide a bio:</label> <!-- Etiqueta de campo -->
+            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea> <!-- Campo de área de texto con filas, columnas y marcador de posición -->
+        </fieldset>
+        <input type="submit" value="Submit"> <!-- Botón de envío del formulario -->
+    </form>
+</body>
+</html>

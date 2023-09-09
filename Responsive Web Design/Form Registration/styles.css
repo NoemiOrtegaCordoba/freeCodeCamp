@@ -1,0 +1,84 @@
+/* Estilos para el cuerpo de la página */
+body {
+  width: 100%; /* Ancho del cuerpo al 100% del viewport */
+  height: 100vh; /* Altura del cuerpo al 100% del viewport */
+  margin: 0; /* Sin margen exterior */
+  background-color: #1b1b32; /* Color de fondo */
+  color: #f5f6f7; /* Color del texto */
+  font-family: Tahoma, sans-serif; /* Fuente de texto */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilos para encabezados de nivel 1 y párrafos */
+h1,
+p {
+  margin: 1em auto; /* Margen superior e inferior de 1em, margen izquierdo y derecho automático */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para formularios */
+form {
+  width: 60vw; /* Ancho del formulario al 60% del viewport */
+  max-width: 500px; /* Ancho máximo del formulario */
+  min-width: 300px; /* Ancho mínimo del formulario */
+  margin: 0 auto; /* Margen izquierdo y derecho automático (centrado horizontalmente) */
+  padding-bottom: 2em; /* Espacio inferior de 2em */
+  background-color: transparent; /* Fondo del formulario transparente */
+}
+
+/* Estilos para grupos de campos */
+fieldset {
+  border: none; /* Sin borde */
+  padding: 2rem 0; /* Relleno superior e inferior de 2rem, margen izquierdo y derecho 0 */
+  border-bottom: 3px solid #3b3b4f; /* Borde inferior sólido de 3px */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilos para el último grupo de campos */
+fieldset:last-of-type {
+  border-bottom: none; /* Sin borde inferior en el último grupo */
+}
+
+/* Estilos para etiquetas de campos */
+label {
+  display: block; /* Mostrar como bloque para que ocupen una línea completa */
+  margin: 0.5rem 0; /* Margen superior e inferior de 0.5rem, margen izquierdo y derecho 0 */
+}
+
+/* Estilos para elementos de entrada, área de texto y selección */
+input,
+textarea,
+select {
+  margin: 10px 0 0 0; /* Margen superior de 10px, margen derecho, inferior e izquierdo 0 */
+  width: 100%; /* Ancho al 100% del contenedor */
+  min-height: 2em; /* Altura mínima de 2em */
+  background-color: #0a0a23; /* Color de fondo */
+  border: 1px solid #0a0a23; /* Borde sólido de 1px */
+  color: #ffffff; /* Color del texto */
+  padding: 6px; /* Relleno de 6px para mejorar la apariencia */
+}
+
+/* Estilos para elementos con clase "inline" */
+.inline {
+  width: auto; /* Ancho automático para elementos en línea */
+  margin: 0 0.5em 0 0; /* Margen superior e inferior 0, margen derecho 0.5em, margen izquierdo 0 */
+  vertical-align: middle; /* Alineación vertical al centro */
+}
+
+/* Estilos para el botón de envío del formulario */
+input[type="submit"] {
+  display: block; /* Mostrar como bloque para ocupar una línea completa */
+  width: 60%; /* Ancho al 60% del contenedor */
+  margin: 1em auto; /* Margen superior e inferior de 1em, margen izquierdo y derecho automático */
+  height: 2em; /* Altura de 2em */
+  font-size: 1.1rem; /* Tamaño de fuente de 1.1rem */
+  background-color: #3b3b4f; /* Color de fondo */
+  border: 1px solid white; /* Borde sólido blanco */
+  min-width: 300px; /* Ancho mínimo de 300px */
+  cursor: pointer; /* Cambio de cursor al pasar el mouse */
+}
+
+/* Estilos para el campo de carga de archivo */
+input[type="file"] {
+  padding: 2px; /* Aumento del relleno para una apariencia más uniforme */
+}
