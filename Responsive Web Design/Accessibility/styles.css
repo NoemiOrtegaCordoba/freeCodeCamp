@@ -1,0 +1,216 @@
+/* Establecemos un estilo base para el cuerpo del documento */
+body {
+  background: #f5f6f7; /* Fondo de color gris claro */
+  color: #1b1b32; /* Color del texto principal */
+  font-family: Helvetica, sans-serif; /* Fuente principal, con respaldo genérico de sistema */
+  margin: 0; /* Eliminamos el margen predeterminado del cuerpo */
+}
+
+/* Estilizamos el encabezado */
+header {
+  width: 100%;
+  height: 50px; /* Altura del encabezado */
+  background-color: #1b1b32; /* Fondo del encabezado en un tono oscuro */
+  display: flex; /* Utilizamos el modelo de caja flexible */
+  justify-content: space-between; /* Distribuimos elementos horizontalmente */
+  align-items: center; /* Centramos verticalmente los elementos */
+  position: fixed; /* Fijamos el encabezado en la parte superior */
+  top: 0; /* Posición en la parte superior de la ventana */
+}
+
+/* Estilizamos el logotipo */
+#logo {
+  width: max(100px, 18vw); /* Ancho máximo basado en viewport */
+  background-color: #0a0a23; /* Fondo del logotipo */
+  aspect-ratio: 35 / 4; /* Proporción de aspecto */
+  padding: 0.4rem; /* Espaciado interno del logotipo */
+}
+
+/* Estilizamos el título */
+h1 {
+  color: #f1be32; /* Color del texto del título */
+  font-size: min(5vw, 1.2em); /* Tamaño de fuente adaptable al viewport */
+  text-align: center; /* Alineación centrada del texto */
+}
+
+/* Estilizamos la barra de navegación */
+nav {
+  width: 50%; /* Ancho de la barra de navegación */
+  max-width: 300px; /* Ancho máximo */
+  height: 50px; /* Altura de la barra de navegación */
+}
+
+/* Estilizamos la lista no ordenada dentro de la barra de navegación */
+nav > ul {
+  display: flex; /* Utilizamos el modelo de caja flexible */
+  justify-content: space-evenly; /* Distribuimos elementos uniformemente */
+  flex-wrap: wrap; /* Permitimos que los elementos se ajusten automáticamente */
+  align-items: center; /* Centramos verticalmente los elementos */
+  padding-inline-start: 0; /* Eliminamos el relleno predeterminado */
+  margin-block: 0; /* Eliminamos el margen vertical predeterminado */
+  height: 100%; /* Altura de la lista */
+}
+
+/* Estilizamos los elementos de la lista en la barra de navegación */
+nav > ul > li {
+  color: #dfdfe2; /* Color del texto */
+  margin: 0 0.2rem; /* Margen horizontal */
+  padding: 0.2rem; /* Relleno interno */
+  display: block; /* Convertimos los elementos en bloques */
+}
+
+/* Cambiamos el color y el cursor al pasar el mouse sobre los elementos de la lista */
+nav > ul > li:hover {
+  background-color: #dfdfe2; /* Color de fondo al pasar el mouse */
+  color: #1b1b32; /* Color del texto al pasar el mouse */
+  cursor: pointer; /* Cambiamos el cursor al puntero */
+}
+
+/* Estilizamos los enlaces en la barra de navegación */
+li > a {
+  color: inherit; /* Heredamos el color de texto de su elemento padre */
+  text-decoration: none; /* Eliminamos la subrayado predeterminado de los enlaces */
+}
+
+/* Añadimos espacio superior al contenido principal para evitar que se oculte detrás del encabezado fijo */
+main {
+  padding-top: 50px; /* Espacio superior igual a la altura del encabezado */
+}
+
+/* Estilizamos las secciones del contenido */
+section {
+  width: 80%; /* Ancho de las secciones */
+  margin: 0 auto 10px auto; /* Margen exterior automático para centrar */
+  max-width: 600px; /* Ancho máximo */
+}
+
+/* Estilizamos los encabezados h1 y h2 con fuente de respaldo */
+h1,
+h2 {
+  font-family: Verdana, Tahoma, sans-serif; /* Fuente de respaldo genérica de sistema */
+}
+
+/* Estilizamos los encabezados h2 con un borde inferior */
+h2 {
+  border-bottom: 4px solid #dfdfe2; /* Borde inferior */
+  margin-top: 0px; /* Margen superior */
+  padding-top: 60px; /* Espaciado superior */
+}
+
+/* Estilizamos el formulario y los elementos relacionados */
+.info {
+  padding: 10px 0 0 5px; /* Relleno interno */
+}
+
+/* Estilizamos los elementos de entrada de información */
+.formrow {
+  margin-top: 30px; /* Margen superior */
+  padding: 0px 15px; /* Relleno horizontal */
+}
+
+/* Estilizamos los campos de entrada de texto */
+input {
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilizamos las etiquetas y campos de entrada de texto en línea */
+.info label,
+.info input {
+  display: inline-block; /* Mostramos elementos en línea */
+}
+
+/* Estilizamos los campos de entrada de texto */
+.info input {
+  width: 50%; /* Ancho del campo de entrada */
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilizamos las etiquetas de los campos de entrada de texto */
+.info label {
+  width: 10%; /* Ancho de la etiqueta */
+  min-width: 55px; /* Ancho mínimo */
+  text-align: right; /* Alineación del texto a la derecha */
+}
+
+/* Estilizamos los bloques de preguntas */
+.question-block {
+  text-align: left; /* Alineación del texto a la izquierda */
+  display: block; /* Convertimos los elementos en bloques */
+  width: 100%; /* Ancho del bloque */
+  margin-top: 20px; /* Margen superior */
+  padding-top: 5px; /* Espaciado superior */
+}
+
+/* Estilizamos párrafos dentro de los bloques de pregunta */
+p {
+  margin-top: 5px; /* Margen superior */
+  padding-left: 15px; /* Espaciado izquierdo */
+  font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Agregamos un prefijo personalizado a los párrafos dentro de los bloques de pregunta */
+p::before {
+  content: "Question #"; /* Agregamos contenido antes de los párrafos */
+}
+
+/* Estilizamos los elementos de pregunta */
+.question {
+  border: none; /* Eliminamos el borde del campo de pregunta */
+  padding-bottom: 0; /* Eliminamos el espaciado inferior */
+}
+
+/* Estilizamos las listas de respuestas */
+.answers-list {
+  list-style: none; /* Eliminamos los marcadores de lista */
+  padding: 0; /* Eliminamos el relleno predeterminado de la lista */
+}
+
+/* Estilizamos el botón de envío del formulario */
+button {
+  display: block; /* Convertimos el botón en un elemento de bloque */
+  margin: 40px auto; /* Margen exterior automático para centrar */
+  width: 40%; /* Ancho del botón */
+  padding: 15px; /* Relleno interno */
+  font-size: 23px; /* Tamaño de fuente */
+  background: #d0d0d5; /* Fondo del botón */
+  border: 3px solid #3b3b4f; /* Borde del botón */
+}
+
+/* Estilizamos el pie de página */
+footer {
+  background-color: #2a2a40; /* Fondo del pie de página */
+  display: flex; /* Utilizamos el modelo de caja flexible */
+  justify-content: center; /* Centramos horizontalmente */
+}
+
+/* Estilizamos el texto en el pie de página y los enlaces */
+footer,
+footer a {
+  color: #dfdfe2; /* Color del texto y enlaces */
+}
+
+/* Estilizamos la dirección en el pie de página */
+address {
+  text-align: center; /* Alineación del texto al centro */
+  padding: 0.3em; /* Relleno interno */
+}
+
+/* Estilizamos elementos de texto solo accesibles por lectores de pantalla */
+.sr-only {
+  position: absolute; /* Posición absoluta */
+  width: 1px; /* Ancho de 1 píxel */
+  height: 1px; /* Altura de 1 píxel */
+  padding: 0; /* Sin relleno */
+  margin: -1px; /* Margen negativo para ocultar completamente el contenido */
+  overflow: hidden; /* Ocultar el contenido desbordado */
+  clip: rect(0, 0, 0, 0); /* Clip rectángulo vacío */
+  white-space: nowrap; /* Evitar saltos de línea */
+  border: 0; /* Sin bordes */
+}
+
+/* Habilitamos el desplazamiento suave si la preferencia de reducción de movimiento no está establecida */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth; /* Desplazamiento suave para todos los elementos */
+  }
+}

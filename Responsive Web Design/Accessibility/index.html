@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Declaración de tipo de documento -->
+<html lang="en"> <!-- Elemento raíz, se establece el idioma a inglés -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración de la vista adaptable a dispositivos -->
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project">
+    <!-- Descripción del documento -->
+    <title>Accessibility Quiz</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo CSS externo -->
+</head>
+
+<body>
+    <header> <!-- Encabezado de la página -->
+        <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo">
+        <!-- Imagen con un atributo "alt" para descripción -->
+        <h1>HTML/CSS Quiz</h1> <!-- Título principal -->
+        <nav> <!-- Barra de navegación -->
+            <ul> <!-- Lista no ordenada -->
+                <li><a href="#student-info">INFO</a></li> <!-- Elemento de lista con un enlace -->
+                <li><a href="#html-questions">HTML</a></li> <!-- Elemento de lista con un enlace -->
+                <li><a href="#css-questions">CSS</a></li> <!-- Elemento de lista con un enlace -->
+            </ul>
+        </nav>
+    </header>
+    <main> <!-- Contenido principal de la página -->
+        <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+            <!-- Formulario con método y acción -->
+            <section role="region" aria-labelledby="student-info"> <!-- Sección con atributos de accesibilidad -->
+                <h2 id="student-info">Student Info</h2> <!-- Título de la sección -->
+                <div class="info"> <!-- Div para agrupar información -->
+                    <label for="student-name">Name:</label> <!-- Etiqueta de formulario -->
+                    <input type="text" name="student-name" id="student-name" required>
+                    <!-- Campo de entrada de texto con atributos -->
+                </div>
+                <div class="info"> <!-- Div para agrupar información -->
+                    <label for="student-email">Email:</label> <!-- Etiqueta de formulario -->
+                    <input type="email" name="student-email" id="student-email" required>
+                    <!-- Campo de entrada de correo electrónico con atributos -->
+                </div>
+                <div class="info"> <!-- Div para agrupar información -->
+                    <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+                    <!-- Etiqueta de formulario con texto y un span para atributos de accesibilidad -->
+                    <input type="date" name="birth-date" id="birth-date"> <!-- Campo de entrada de fecha -->
+                </div>
+            </section>
+            <section role="region" aria-labelledby="html-questions"> <!-- Sección con atributos de accesibilidad -->
+                <h2 id="html-questions">HTML</h2> <!-- Título de la sección -->
+                <div class="question-block"> <!-- Bloque de pregunta -->
+                    <p>1</p> <!-- Párrafo con número de pregunta -->
+                    <fieldset class="question" name="html-question-one"> <!-- Conjunto de elementos relacionados -->
+                        <legend>
+                            The legend element represents a caption for the content of its
+                            parent fieldset element
+                        </legend> <!-- Leyenda del conjunto de elementos -->
+                        <ul class="answers-list"> <!-- Lista no ordenada de respuestas -->
+                            <li>
+                                <label for="q1-a1"> <!-- Etiqueta de formulario con atributo "for" -->
+                                    <input type="radio" id="q1-a1" name="q1" value="true"> <!-- Opción de selección -->
+                                    True <!-- Texto de opción -->
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2"> <!-- Etiqueta de formulario con atributo "for" -->
+                                    <input type="radio" id="q1-a2" name="q1" value="false"> <!-- Opción de selección -->
+                                    False <!-- Texto de opción -->
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block"> <!-- Bloque de pregunta -->
+                    <p>2</p> <!-- Párrafo con número de pregunta -->
+                    <fieldset class="question" name="html-question-two"> <!-- Conjunto de elementos relacionados -->
+                        <legend>
+                            A label element nesting an input element is required to have a
+                            for attribute with the same value as the input's id
+                        </legend> <!-- Leyenda del conjunto de elementos -->
+                        <ul class="answers-list"> <!-- Lista no ordenada de respuestas -->
+                            <li>
+                                <label for="q2-a1"> <!-- Etiqueta de formulario con atributo "for" -->
+                                    <input type="radio" id="q2-a1" name="q2" value="true"> <!-- Opción de selección -->
+                                    True <!-- Texto de opción -->
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2"> <!-- Etiqueta de formulario con atributo "for" -->
+                                    <input type="radio" id="q2-a2" name="q2" value="false"> <!-- Opción de selección -->
+                                    False <!-- Texto de opción -->
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="css-questions"> <!-- Sección con atributos de accesibilidad -->
+                <h2 id="css-questions">CSS</h2> <!-- Título de la sección -->
+                <div class="formrow"> <!-- Fila del formulario -->
+                    <div class="question-block"> <!-- Bloque de pregunta -->
+                        <label for="customer">Are you a frontend developer?</label> <!-- Etiqueta de formulario -->
+                    </div>
+                    <div class="answer"> <!-- Respuesta del formulario -->
+                        <select name="customer" id="customer" required> <!-- Campo de selección -->
+                            <option value="">Select an option</option> <!-- Opción del campo de selección -->
+                            <option value="yes">Yes</option> <!-- Opción del campo de selección -->
+                            <option value="no">No</option> <!-- Opción del campo de selección -->
+                        </select>
+                    </div>
+                    <div class="question-block"> <!-- Bloque de pregunta -->
+                        <label for="css-questions">Do you have any questions:</label> <!-- Etiqueta de formulario -->
+                    </div>
+                    <div class="answer"> <!-- Respuesta del formulario -->
+                        <textarea id="css-questions" name="css-questions" rows="5" cols="24"
+                            placeholder="Who is flexbox..."></textarea> <!-- Área de texto -->
+                    </div>
+                </div>
+            </section>
+            <button type="submit">Send</button> <!-- Botón de envío del formulario -->
+        </form>
+    </main>
+    <footer> <!-- Pie de página -->
+        <address> <!-- Dirección de contacto -->
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br> <!-- Enlace web -->
+            San Francisco<br> <!-- Ciudad -->
+            California<br> <!-- Estado -->
+            USA <!-- País -->
+        </address>
+    </footer>
+</body>
+
+</html>
